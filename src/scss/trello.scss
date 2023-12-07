@@ -7,20 +7,26 @@
   padding: 3%;
   gap: 5%;
   background-color: rgb(0, 51, 51);
+
   header {
-    // @include flex-between;
     height: 150px;
     width: 100%;
     background-color: rgb(225, 198, 251);
     border-radius: 20px;
     padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     time {
-      // @include flex;
       height: 80px;
       width: 250px;
       font-size: 2.5rem;
       background-color: #fff;
       border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -31,14 +37,18 @@ section {
   margin: 0 20px;
   background-color: rgb(243, 236, 236);
   border-radius: 20px;
+
   .todo__column-title,
   .in-progress__column-title,
   .done__column-title {
-    // @include flex-between;
     height: 60px;
     width: 100%;
     border-radius: 20px 20px 0 0;
     padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     p {
       font-size: 2rem;
       color: #fff;
@@ -70,7 +80,8 @@ section {
 
 .todo__btn-add,
 .done__btn-delete {
-  // @include btnAttributes;
+  border: none;
+  cursor: pointer;
   height: 50px;
   width: 90%;
   border-radius: 10px;
