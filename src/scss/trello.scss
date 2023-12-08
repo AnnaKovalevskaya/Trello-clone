@@ -76,6 +76,26 @@ section {
   overflow: auto;
   display: flex;
   flex-direction: column;
+
+  .todo__ul__li,
+  .in-progress__ul__li,
+  .done__ul__li {
+    height: 170px;
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 5px;
+    .todo__ul__li p,
+    .in-progress__ul__li p,
+    .done__ul__li p {
+      width: 100%;
+      overflow: auto;
+      margin: 5px;
+    }
+  }
 }
 
 .todo__btn-add,
@@ -95,4 +115,28 @@ section {
 
 .done__btn-delete {
   background-color: rgb(77, 246, 85);
+}
+.btn__group {
+  display: flex;
+  justify-content: space-between;
+  select {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+  }
+}
+.btn__group__btn-edit,
+.btn__group__btn-delete {
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 70px;
+  background-color: rgb(236, 142, 142);
+  color: #fff;
+  border-radius: 5px;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

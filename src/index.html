@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="./scss/app.scss">
   <script type="module" src="./js/app.js"></script>
 
@@ -50,17 +51,21 @@
           <h1 class="modal-title fs-5">Add todo</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <input type="text" class="form-control mb-3" id="inputTitle" placeholder="Enter title">
-          <textarea class="form-control mb-1" id="inputDescriprion" rows="5" cols="30" placeholder="Enter description"></textarea>
-          <select id="selectUser" class="form-select">
-            <option selected>Choose user</option>
-          </select>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-success" >Save</button>
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        </div>
+        <form id="formAddCard"></form>
+          <div class="modal-body">
+            <input type="text" class="form-control mb-3" id="inputTitle" placeholder="Enter title" name="title">
+            <textarea class="form-control mb-1" id="inputDescriprion" rows="5" cols="30" name="description"
+              placeholder="Enter description" ></textarea>
+            <select id="selectUser" class="form-select form-select-sm" name="user">
+              <option selected disabled>Choose user</option>
+            </select>
+          </div>
+          <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#e2d2f9" name="bgColor" title="Choose your color" />
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -72,15 +77,21 @@
           <h1 class="modal-title fs-5" id="modalEditCardTitle">Edit card</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <input type="text" class="form-control mb-1" id="inputEditTitle" placeholder="Enter title">
-          <textarea class="form-control mb-1" id="inputEditDescriprion" cols="30" rows="10" placeholder="Enter description"></textarea>
-          <select id="selectEditUser" class="form-select"></select>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
+        <form id="formEditCard">
+          <div class="modal-body">
+            <input type="text" class="form-control mb-1" id="inputEditTitle" name="titleEdit" placeholder="Enter title">
+            <textarea class="form-control mb-1" id="inputEditDescriprion" cols="30" rows="10" name="descriptionEdit"
+              placeholder="Enter description" ></textarea>
+            <select id="selectEditUser" class="form-select" name="userEdit">
+              <option selected disabled value="">Select user</option>
+            </select>
+          </div>
+          <input type="color" class="form-control form-control-color" id="exampleColorInput" name="bgColorEdit" title="Choose your color" />
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -97,7 +108,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cansel</button>
-          <button type="button" id="btnDeleteAllCards" class="btn btn-secondary" data-bs-dismiss="modal">Confirm</button>
+          <button type="button" id="btnDeleteAllCards" class="btn btn-secondary"
+            data-bs-dismiss="modal">Confirm</button>
         </div>
       </div>
     </div>
