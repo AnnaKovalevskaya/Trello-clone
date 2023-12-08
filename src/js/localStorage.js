@@ -1,3 +1,4 @@
+import { getCount } from './count.js'
 let todos = getData()
 
 // получение данных
@@ -8,6 +9,9 @@ function setData() {
 function getData() {
   const todos = localStorage.getItem('todos')
   return todos ? JSON.parse(todos) : []
+}
+if (localStorage.getItem('todos')) {
+  getCount()
 }
 
 export { setData, todos }

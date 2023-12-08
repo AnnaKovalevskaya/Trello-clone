@@ -1,4 +1,5 @@
 import { getTime, date } from './clock.js'
+import { getUser } from './users.js'
 
 const timer = setInterval(getTime, 1000)
 import {
